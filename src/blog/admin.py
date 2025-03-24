@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import posts
+from .models import Post
 # Register your models here.
 
 
 class PostsAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(posts,PostsAdmin)
+admin.site.register(Post,PostsAdmin)

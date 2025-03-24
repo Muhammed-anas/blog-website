@@ -22,7 +22,7 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         {% for post in all_posts %}
         <div class="post-preview">
-          <a href="{% url 'post_list' id=all_posts.id %}">
+          <a href="{% url 'post_list' id=post.id %}">
             <h2 class="post-title">
               {{post.title}}
             </h2>
@@ -31,7 +31,7 @@
             </h3>
           </a>
           <p class="post-meta">Posted by
-            <a href="#">{{post.author}}</a>
+            <a href="#">{{post.author.user}}</a>
             on {{post.updated_at}}
           <a href=""> ✘</a>
           </p>

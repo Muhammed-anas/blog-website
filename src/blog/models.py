@@ -4,7 +4,7 @@ from user.models import Profile, Location
 
 
 # Create your models here.
-class posts(models.Model):
+class Post(models.Model):
     id = models.UUIDField(primary_key=True, unique=True,
                           editable=False, default=uuid.uuid4)
     title = models.CharField(max_length=200, null=False)

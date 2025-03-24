@@ -366,3 +366,7 @@ footer .copyright {
     color: #0085a1;
     
 }
+
+.about-bg{
+    background-image: url('../image/about-bg.jpg');
+}

@@ -1,7 +1,12 @@
 {% extends "base/base.html" %}
-
+{% load static %}
+{% block 'body' %}
 <!-- Page Header -->
+ {% for post in all_posts  %}
+   
+ 
 <header class="masthead">
+  <img src="{{ post.image.url }}">
 	<div class="overlay"></div>
 	<div class="container">
 		<div class="row">
@@ -10,7 +15,7 @@
 					<h1>{{post.title}}</h1>
 					<h2 class="subheading">{{post.subtitle}}</h2>
 					<span class="meta">Posted by
-              <a href="#">{{post.author}}</a>
+              <a href="#">{{post.author.user}}</a>
               on {{post.updated_at}}</span>
           </div>
         </div>
@@ -36,3 +41,5 @@
   </article>
 
   <hr>
+  {% endfor %}
+  {% endblock %}
