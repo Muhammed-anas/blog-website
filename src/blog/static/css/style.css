@@ -358,6 +358,10 @@ footer .copyright {
     object-fit:cover;
 }
 
+.home-btn{
+    color: #01070d;
+}
+
 .home-btn:hover{
     color: #0085a1;
     

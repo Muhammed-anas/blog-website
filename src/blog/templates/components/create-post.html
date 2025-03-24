@@ -1,0 +1,34 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+
+  <!-- Page Header -->
+  <header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+
+            {% if route == "new_post" %}
+            <h1>New Post</h1>
+            {% elif route == "edit_post" %}
+            <h1>Edit Post</h1>
+            {% endif %}
+
+            <span class="subheading">You're going to make a great blog post!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        
+         
+      </div>
+    </div>
+  </div>
+
