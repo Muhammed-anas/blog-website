@@ -1,42 +1,38 @@
 {% extends "base/base.html" %}
 {% load static %}
+
 {% block 'body' %}
-<!-- Page Header -->
- {% for post in all_posts%}
-<header class="masthead post-image style="background-image: url('{{post.image.url}}')">
-	<div class="overlay"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-8 col-md-10 mx-auto">
-				<div class="post-heading">
-					<h1>{{post.title}}</h1>
-					<h2 class="subheading">{{post.subtitle}}</h2>
-					<span class="meta">Posted by
-              <a href="#">{{post.author}}</a>
-              on {{post.date}}</span>
+  {% for post in all_posts %}
+    <!-- Page Header -->
+    <header class="masthead post-img" style="background-image: url('{{ post.image.url }}');">
+      <div class="overlay"></div>
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto text-white text-center">
+            <div class="post-heading">
+              <h1 class="font-weight-bold">{{ post.title }}</h1>
+              <h2 class="subheading">{{ post.subtitle }}</h2>
+              <span class="meta">Posted by <a href="#" class="text-warning">{{ post.author.user }}</a> on {{ post.updated_at }}</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Post Content -->
-  <article>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <p>
-            {{ post.body|safe }}
-          </p>
-           <hr>
-           <div class="clearfix">
-          <a class="btn btn-primary float-right" href="">Edit Post</a>
-        </div>
+    <!-- Post Content -->
+    <article class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p class="lead">{{ post.content }}</p>
+            <hr>
+            <div class="clearfix">
+              <a class="btn btn-primary float-right" href="#">Edit Post</a>
+            </div>
           </div>
+        </div>
       </div>
-    </div>
-  </article>
-
-  <hr>
+    </article>
+    <hr>
   {% endfor %}
-  {% endblock %}
+{% endblock %}

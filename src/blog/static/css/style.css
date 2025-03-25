@@ -211,10 +211,14 @@ img::selection, img::-moz-selection {
 }
 
 
-.post-image {
+.post-img {
     background-size: cover;
     background-position: center;
     position: relative;
+}
+
+.new-post {
+    background-image: url('../image/post-bg.jpg');
 }
 
 header.masthead .overlay {
