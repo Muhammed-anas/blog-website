@@ -170,15 +170,37 @@ img::selection, img::-moz-selection {
 }
 
 /* Masthead */
-header.masthead {
+.home-bg {
     margin-bottom: 50px;
     background: no-repeat center center;
     background-color: #5aa4ef;
     background-attachment: scroll;
     position: relative;
     background-size: cover;
-    background-image: url('static/image/home-bg.jpg');
+    background-image: url('../image/home-bg.jpg');
 }
+
+.about-bg {
+    margin-bottom: 50px;
+    background: no-repeat center center;
+    background-color: #5aa4ef;
+    background-attachment: scroll;
+    position: relative;
+    background-size: cover;
+    background-image: url('../image/about-bg.jpg');
+}
+
+.contact-bg {
+    margin-bottom: 50px;
+    background: no-repeat center center;
+    background-color: #5aa4ef;
+    background-attachment: scroll;
+    position: relative;
+    background-size: cover;
+    background-image: url('../image/contact-bg.jpg');
+}
+
+
 
 header.masthead .overlay {
     position: absolute;
@@ -194,7 +216,7 @@ header.masthead .page-heading,
 header.masthead .post-heading, 
 header.masthead .site-heading {
     padding: 200px 0 150px;
-    color: #fff;
+    color: white;
     text-align: center;
 }
 
@@ -202,6 +224,7 @@ header.masthead .page-heading h1,
 header.masthead .site-heading h1 {
     font-size: 50px;
     margin-top: 0;
+    color:rgb(21, 182, 226);
 }
 
 header.masthead .page-heading .subheading, 
@@ -209,6 +232,7 @@ header.masthead .site-heading .subheading {
     font-size: 24px;
     font-weight: 300;
     line-height: 1.1;
+    color: rgb(250, 250, 250);
     display: block;
     margin: 10px 0 0;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -365,8 +389,4 @@ footer .copyright {
 .home-btn:hover{
     color: #0085a1;
     
-}
-
-.about-bg{
-    background-image: url('../image/about-bg.jpg');
 }
