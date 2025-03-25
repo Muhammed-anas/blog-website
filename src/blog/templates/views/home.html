@@ -22,7 +22,9 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         {% for post in all_posts %}
         <div class="post-preview">
-          <a href="{% url 'post_list' id=post.id %}">
+          <a href="{% url 'post_list' id=post.id %}" style="text-decoration: none;">
+            <img class="bd-placeholder-img card-img-top" width="100%" src="{{post.image.url}}" role="img"
+            aria-label="Placeholder: Thumbnail" focusable="false"> 
             <h2 class="post-title">
               {{post.title}}
             </h2>

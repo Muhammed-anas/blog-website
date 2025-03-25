@@ -200,7 +200,22 @@ img::selection, img::-moz-selection {
     background-image: url('../image/contact-bg.jpg');
 }
 
+.new-post {
+    margin-bottom: 50px;
+    background: no-repeat center center;
+    background-color: #5aa4ef;
+    background-attachment: scroll;
+    position: relative;
+    background-size: cover;
+    background-image: url('../image/post-bg.jpg');
+}
 
+
+.post-image {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
 
 header.masthead .overlay {
     position: absolute;
@@ -390,3 +405,4 @@ footer .copyright {
     color: #0085a1;
     
 }
+
