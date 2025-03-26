@@ -16,6 +16,9 @@
     </div>
     
   </header>
+  <div class="clearfix">
+    <a class="btn btn-outline-info btn-blog" href="{% url 'new_post' %}">Create New Blog</a>
+  </div>
   <!-- Main Content -->
   <div class="container">
     <div class="row">
@@ -23,7 +26,7 @@
         {% for post in all_posts %}
         <div class="post-preview">
           <a href="{% url 'post_list' id=post.id %}" style="text-decoration: none;">
-            <img class="bd-placeholder-img card-img-top" width="100%" src="{{post.image.url}}" role="img"
+            <img class="bd-placeholder-img card-img-top" width="50%" src="{{post.image.url}}" role="img"
             aria-label="Placeholder: Thumbnail" focusable="false"> 
             <h2 class="post-title">
               {{post.title}}
@@ -44,9 +47,6 @@
 
 
         <!-- New Post -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{% url 'new_post' %}">Create New Post</a>
-        </div>
       </div>
     </div>
   </div>

@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Post
 from .forms import postForms
 # Create your views here.
@@ -20,7 +21,18 @@ def about_page(request):
 
 def create_post(request):
     if request.method == 'POST':
-        listing_form = postForms(request.POST, request.FILES)
+        try:
+            listing_form = postForms(request.POST, request.FILES)
+            if listing_form.is_valid():
+                listing = listing_form.save(commit=False)
+                listing.author = request.user.profile
+                listing.save()
+                messages.info(request,f'new post was created')
+                return redirect('home')
+            else:
+                raise Exception
+        except Exception as e:
+            print(e)  
     elif request.method == 'GET':
         listing_form = postForms()
     return render (request, 'components/create-post.html',
