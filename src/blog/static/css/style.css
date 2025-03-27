@@ -215,6 +215,7 @@ img::selection, img::-moz-selection {
     background-size: cover;
     background-position: center;
     position: relative;
+    object-fit: cover;
 }
 
 .new-post {
@@ -243,7 +244,7 @@ header.masthead .page-heading h1,
 header.masthead .site-heading h1 {
     font-size: 50px;
     margin-top: 0;
-    color:rgb(21, 182, 226);
+    color:white;
 }
 
 header.masthead .page-heading .subheading, 
@@ -251,7 +252,7 @@ header.masthead .site-heading .subheading {
     font-size: 24px;
     font-weight: 300;
     line-height: 1.1;
-    color: rgb(250, 250, 250);
+    color: white;
     display: block;
     margin: 10px 0 0;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -402,7 +403,7 @@ footer .copyright {
 }
 
 .home-btn{
-    color: #01070d;
+    color: #000000;
 }
 
 .home-btn:hover{
@@ -410,7 +411,6 @@ footer .copyright {
     
 }
 
-.btn-blog {
-    text-align: center;
-    color: #01070d;
+.create-btn{
+    margin-left: 30px;
 }

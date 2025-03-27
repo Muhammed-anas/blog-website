@@ -20,11 +20,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from blog import urls as blog_app_url
+from user import urls as user_app_url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(blog_app_url))
+    path('', include(blog_app_url)),
+    path('',include(user_app_url))
 ]
+
 
 if settings.DEBUG:
     urlpatterns += [ path("ckeditor5/", include('django_ckeditor_5.urls'))

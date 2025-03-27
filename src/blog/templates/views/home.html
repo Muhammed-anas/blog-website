@@ -17,7 +17,7 @@
     
   </header>
   <div class="clearfix">
-    <a class="btn btn-outline-info btn-blog" href="{% url 'new_post' %}">Create New Blog</a>
+    <a class="btn btn-outline-info create-btn"  href="{% url 'new_post' %}" style="margin-left: 50%;">Create New Blog</a>
   </div>
   <!-- Main Content -->
   <div class="container">
@@ -26,8 +26,7 @@
         {% for post in all_posts %}
         <div class="post-preview">
           <a href="{% url 'post_list' id=post.id %}" style="text-decoration: none;">
-            <img class="bd-placeholder-img card-img-top" width="50%" src="{{post.image.url}}" role="img"
-            aria-label="Placeholder: Thumbnail" focusable="false"> 
+            
             <h2 class="post-title">
               {{post.title}}
             </h2>
