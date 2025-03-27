@@ -19,7 +19,6 @@ def contact_page(request):
 def about_page(request):
     return render (request, 'views/about.html')
 
-@login_required
 def create_post(request):
     if request.method == 'POST':
         try:

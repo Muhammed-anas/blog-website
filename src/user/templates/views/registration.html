@@ -6,13 +6,13 @@
   
 {% endblock 'header' %}
 {% block 'body' %}
-<div class="container d-flex justify-content-center align-items-center">
+<div class="container d-flex justify-content-center align-items-center ">
     <div class="card shadow-lg p-4 rounded-4 border-0" style="max-width: 500px; width: 100%; margin-top: 5%;">
         <div class="text-center">
             <!-- Logo Placeholder -->
             <img class="mb-3" src='{% static "image/logo.jpg" %}' alt="Logo" width="100" height="100">
             
-            <h3 class="mb-3">Sign In</h3>
+            <h3 class="mb-3">Register</h3>
         </div>
 
         <form action="" method="post" autocomplete="off">
@@ -20,17 +20,16 @@
             
             <!-- Render form fields dynamically -->
             <div class="mb-3">
-               {{ login_form|crispy }}
+               {{ register_form|crispy }}
             </div>
             
-            <button class="btn btn-danger w-100 py-2" type="submit">Sign In</button>
+            <button class="btn btn-danger w-100 py-2" type="submit">Register</button>
         </form>
 
         <div class="text-center mt-3">
-            <p class="mb-2">Not register?</p>
-            <a href="{% url 'register' %}" class="btn btn-outline-danger w-100">Register</a>
+            <p class="mb-2">Already register?</p>
+            <a href="{% url 'login' %}" class="btn btn-outline-danger w-100">Sign In</a>
         </div>
     </div>
 </div>
-
 {% endblock %}
