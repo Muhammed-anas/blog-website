@@ -24,10 +24,10 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <p class="lead">{{ post.content }}</p>
+            <p class="lead">{{ post.content|safe }}</p>
             <hr>
             <div class="clearfix">
-              <a class="btn btn-primary float-right" href="#">Edit Post</a>
+              <a class="btn btn-primary float-right" href="{% url 'edit_list' id=post.id %}">Edit Post</a>
             </div>
           </div>
         </div>
