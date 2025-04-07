@@ -32,8 +32,6 @@ class register_view(View):
                         {'register_form':register_form})
 
 
-
-
 def login_view(request):
     if request.method == 'GET':
         login_form = AuthenticationForm()
