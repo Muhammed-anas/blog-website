@@ -21,6 +21,13 @@
             <!-- Render form fields dynamically -->
             <div class="mb-3">
                {{ login_form|crispy }}
+
+
+            {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{ request.GET.next }}">
+            {% endif %}
+
+            
             </div>
             
             <button class="btn btn-danger w-100 py-2" type="submit">Sign In</button>

@@ -1,6 +1,5 @@
 from django.db import models
 from django_ckeditor_5.fields import CKEditor5Field
-from django.utils.timezone import now
 import uuid
 from user.models import Profile
 
@@ -13,9 +12,9 @@ class Post(models.Model):
     subtitle =models.CharField(max_length=200)
     content = CKEditor5Field('Content', config_name='extends')
     author = models.ForeignKey(Profile, on_delete=models.CASCADE)
-    image = models.ImageField(null=True)
+    image = models.ImageField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(default=now, editable=False)
+    updated_at = models.DateTimeField(auto_now=True, editable=False)
     
     def __str__(self):
         return f'{self.author.user} post'

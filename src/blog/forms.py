@@ -7,7 +7,7 @@ class postForms(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields ={'title','subtitle','content','author','image',}
+        fields ={'title','subtitle','content','image',}
         widgets = {
             "text": CKEditor5Widget(
                 attrs={"class":"django_ckeditor_5"},
@@ -17,5 +17,5 @@ class postForms(forms.ModelForm):
         
     def __init__(self,*args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.order_fields(['title','subtitle','content','author','image'])
-        
+        self.order_fields(['title','subtitle','content','image'])
+      

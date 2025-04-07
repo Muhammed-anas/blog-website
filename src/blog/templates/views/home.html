@@ -8,8 +8,8 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Anas Blog</h1>
-            <span class="subheading">A collection of Anas random musings.</span>
+            <h1>Blog</h1>
+            <span class="subheading">A collection of random musings.</span>
           </div>
         </div>
       </div>
@@ -37,7 +37,13 @@
           <p class="post-meta">Posted by
             <a href="#">{{post.author.user}}</a>
             on {{post.updated_at}}
-          <a href=""> ✘</a>
+            
+            {% if request.user == post.author.user %}
+            <a href="{% url 'delete_post' id=post.id %}"> ✘</a>
+            {% else %}
+            {% endif %}
+
+
           </p>
 
         </div>

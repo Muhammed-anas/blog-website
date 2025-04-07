@@ -49,7 +49,8 @@ def login_view(request):
             if user is not None:
                 login(request,user)
                 messages.success(request, f' User {user.username} Successfully login')
-                return redirect ('home')
+                next_url = request.GET.get('next') or request.POST.get('next')
+                return redirect (next_url) if next_url else redirect ('home')
             else:
                 messages.error(request, f'An error occured trying to login.')
         else:
@@ -57,9 +58,10 @@ def login_view(request):
         
         return render(request, 'views/login.html',
                     {'login_form':login_form})
-
+    
 @login_required
 def logout_user(request):
     logout(request)
     messages.info(request, f'You are Successfully logout ')
     return redirect('main')
+
