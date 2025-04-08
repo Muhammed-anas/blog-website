@@ -9,7 +9,7 @@ class Post(models.Model):
     id = models.UUIDField(primary_key=True, unique=True,
                           editable=False, default=uuid.uuid4)
     title = models.CharField(max_length=200, null=False)
-    subtitle =models.CharField(max_length=200)
+    subtitle =models.CharField(max_length=200, blank=True)
     content = CKEditor5Field('Content', config_name='extends')
     author = models.ForeignKey(Profile, on_delete=models.CASCADE)
     image = models.ImageField(blank=True)

@@ -1,6 +1,7 @@
 {% extends "base/base.html" %}
 {% load static %}
 {% block 'body' %}
+
   <!-- Page Header -->
   <header class="masthead home-bg">
     <div class="overlay"></div>
@@ -17,7 +18,7 @@
     
   </header>
   <div class="clearfix">
-    <a class="btn btn-outline-info create-btn"  href="{% url 'new_post' %}" style="margin-left: 35%;">Create New Blog</a>
+    <a class="btn btn-outline-info create-btn"  href="{% url 'new_post' %}" style="margin:5% 40%; width: 20%;">Create New Blog</a>
   </div>
   <!-- Main Content -->
   <div class="container">
@@ -27,12 +28,14 @@
         <div class="post-preview">
           <a href="{% url 'post_list' id=post.id %}" style="text-decoration: none;">
             
+            <img class="bd-placeholder-img card-img-top" src="{{post.image.url}}" role="img" style="width: 80%; height: 80%; text-align: center;">
             <h2 class="post-title">
               {{post.title}}
             </h2>
             <h3 class="post-subtitle">
               {{post.subtitle}}
             </h3>
+            
           </a>
           <p class="post-meta">Posted by
             <a href="#">{{post.author.user}}</a>

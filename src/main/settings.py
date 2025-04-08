@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+from django.contrib.messages import constants as messages
+
+env = environ.Env()
+env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,10 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-i+p*muhn5gph_!x5d5$i7=7wj-qw(0c7g6q_p7cq3kzlkpa2-*'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(env('DEBUG'))
 
 ALLOWED_HOSTS = ['*']
 
@@ -106,7 +111,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGIN_URL = '/login/'
+LOGOUT_REDIRECT_URL = '/home/'
+LOGIN_REDIRECT_URL = '/home/'
 
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -118,9 +129,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-LOGIN_URL = '/login/'
-LOGOUT_REDIRECT_URL = '/home/'
-LOGIN_REDIRECT_URL = '/home/'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
