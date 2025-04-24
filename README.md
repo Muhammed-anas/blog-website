@@ -15,6 +15,24 @@ The blog website allows users (admin side) to create and publish blog posts enri
 
 🔍 Single Post View: Users can click to read full articles with associated metadata.
 
+Screenshots:
+![Uploading Screenshot 2025-04-24 110157.png…]()
+![Uploading Screenshot 2025-04-24 110210.png…]()
+![Uploading Screenshot 2025-04-24 110226.png…]()
+![Uploading Screenshot 2025-04-24 110257.png…]()
+![Uploading Screenshot 2025-04-24 110237.png…]()
+![Uploading Screenshot 2025-04-24 110518.png…]()
+![Uploading Screenshot 2025-04-24 110311.png…]()
+![Uploading Screenshot 2025-04-24 110336.png…]()
+
+
+
+
+
+
+
+
+
 🧰 Technologies Used:
 Backend: Flask (Python), SQLite with SQLAlchemy ORM
 
