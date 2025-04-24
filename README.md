@@ -19,6 +19,7 @@ The blog website allows users (admin side) to create and publish blog posts enri
 
 #### 🧩 Main Page
 ![Main Page](static/image/screenshots/mainpage.png)
+![Uploading aboutpage.png…]()
 
 #### 🏠 Homepage
 ![Homepage](static/image/screenshots/homepage.png)
