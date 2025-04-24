@@ -15,15 +15,31 @@ The blog website allows users (admin side) to create and publish blog posts enri
 
 🔍 Single Post View: Users can click to read full articles with associated metadata.
 
-Screenshots:
-![Uploading Screenshot 2025-04-24 110157.png…]()
-![Uploading Screenshot 2025-04-24 110210.png…]()
-![Uploading Screenshot 2025-04-24 110226.png…]()
-![Uploading Screenshot 2025-04-24 110257.png…]()
-![Uploading Screenshot 2025-04-24 110237.png…]()
-![Uploading Screenshot 2025-04-24 110518.png…]()
-![Uploading Screenshot 2025-04-24 110311.png…]()
-![Uploading Screenshot 2025-04-24 110336.png…]()
+### 📸 Screenshots
+
+#### 🧩 Main Page
+![Main Page](static/image/screenshots/mainpage.png)
+
+#### 🏠 Homepage
+![Homepage](static/image/screenshots/homepage.png)
+![Homepage Alt 1](static/image/screenshots/homepage1.png)
+![Homepage Alt 2](static/image/screenshots/homepage2.png)
+
+#### 📝 New Post Page
+![New Post](static/image/screenshots/new-post.png)
+
+#### 📄 Post View Page
+![Post View](static/image/screenshots/post.png)
+
+#### 📞 Contact Page
+![Contact](static/image/screenshots/contactpage.png)
+
+#### ℹ️ About Page
+![About](static/image/screenshots/aboutpage.png)
+
+
+
+
 
 
 
