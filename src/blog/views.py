@@ -11,7 +11,7 @@ def main_page(request):
     return render (request, 'views/main.html')
 
 def home_page(request):
-    all_posts = Post.objects.all()
+    all_posts = Post.objects.all().order_by('-updated_at')
     return render (request, 'views/home.html',{
         'all_posts':all_posts })
 

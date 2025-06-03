@@ -12,7 +12,7 @@ class Post(models.Model):
     subtitle =models.CharField(max_length=200, blank=True)
     content = CKEditor5Field('Content', config_name='extends')
     author = models.ForeignKey(Profile, on_delete=models.CASCADE)
-    image = models.ImageField(blank=True)
+    image = models.ImageField(blank=True,null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, editable=False)
     

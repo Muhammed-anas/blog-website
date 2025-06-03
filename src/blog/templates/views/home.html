@@ -4,10 +4,11 @@
 
   <!-- Page Header -->
   <header class="masthead home-bg">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
+
+    <div class="overlay" style="background-color: rgba(0, 0, 0, 0.5); height: 100%;"></div>
+    <div class="container text-white py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
           <div class="site-heading">
             <h1>Blog</h1>
             <span class="subheading">A collection of random musings.</span>
@@ -17,47 +18,46 @@
     </div>
     
   </header>
-  <div class="clearfix">
-    <a class="btn btn-outline-info create-btn"  href="{% url 'new_post' %}" style="margin:5% 40%; width: 20%;">Create New Blog</a>
+
+  <!-- Create a button -->
+  <div class="text-center my-5">
+    <a class="btn btn-info btn-outline-success btn-lg text-white"  href="{% url 'new_post' %}">Create New Blog</a>
   </div>
+
   <!-- Main Content -->
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
         {% for post in all_posts %}
-        <div class="post-preview">
+        <div class="col-lg-4 col-md-6 mb-5">
+        <div class="card h-100 shadow-sm border-0">
           <a href="{% url 'post_list' id=post.id %}" style="text-decoration: none;">
-            
-            <img class="bd-placeholder-img card-img-top" src="{{post.image.url}}" role="img" style="width: 80%; height: 80%; text-align: center;">
-            <h2 class="post-title">
-              {{post.title}}
-            </h2>
-            <h3 class="post-subtitle">
-              {{post.subtitle}}
-            </h3>
-            
-          </a>
-          <p class="post-meta">Posted by
-            <a href="#">{{post.author.user}}</a>
-            on {{post.updated_at}}
-            
-            {% if request.user == post.author.user %}
-            <a href="{% url 'delete_post' id=post.id %}"> ✘</a>
+            {% if post.image %}
+            <img class="card-img-top" src="{{post.image.url}}" role="img" style="height: 250px; object-fit: cover;" alt="{{post.title}}">
             {% else %}
+            <img src="{% static 'images/defult.jpg' %}" class="card-img-top" style="height: 250px; object-fit: cover;" alt="Default">
             {% endif %}
 
+            <div class="card-body text-dark">   
+            <h5 class="card-title">{{post.title}}</h2>
+            <h3 class="card-text">{{post.subtitle}}</h3>
+          </div>  
+          </a>
 
-          </p>
+          <div class="text-muted text-center">    
+          Posted by <strong> {{post.author.user}}</strong>
+            on {{post.updated_at}}
 
+            {% if request.user == post.author.user %}
+            <br><a href="{% url 'delete_post' id=post.id %}" class="text-danger"> ✘ Delete</a>
+            {% endif %}         
+          </div>
         </div>
-        <hr>
-        {% endfor %}
-
-
-        <!-- New Post -->
       </div>
+      
+        {% endfor %}
+      
     </div>
   </div>
-  <hr>
-{% endblock %}
-
+ 
+  {% endblock %}
+  
