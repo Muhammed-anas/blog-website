@@ -12,7 +12,9 @@
             <div class="post-heading">
               <h1 class="font-weight-bold">{{ post.title }}</h1>
               <h2 class="subheading">{{ post.subtitle }}</h2>
-              <span class="meta">Posted by <a href="#" class="text-info">{{ post.author.user }}</a> on {{ post.updated_at }}</span>
+              <span class="meta">
+                <a href="#" class="text-info">{{ post.author.user }}</a><br>
+                 {{ post.updated_at }}</span>
             </div>
           </div>
         </div>
