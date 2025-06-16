@@ -47,7 +47,7 @@
           Posted by <strong> {{post.author.user}}</strong>
             on {{post.updated_at}}
 
-            {% if request.user == post.author.user %}
+            {% if request.user == post.author.user or request.user.is_superuser %}
             <br><a href="{% url 'delete_post' id=post.id %}" class="text-danger"> ✘ Delete</a>
             {% endif %}         
           </div>
