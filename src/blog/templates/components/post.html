@@ -27,7 +27,7 @@
             <p class="lead">{{ post.content|safe }}</p>
             <hr>
             <div class="clearfix">
-              {% if request.user == post.author.user %}
+              {% if request.user == post.author.user or request.user.is_superuser %}
               <a class="btn btn-primary float-right" href="{% url 'edit_list' id=post.id %}">Edit Post</a>
               {% else %}
               {% endif %}
